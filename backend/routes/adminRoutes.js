@@ -1,10 +1,11 @@
 import express from 'express';
-import { addCoupon, getCoupons, login, removeCoupon } from '../controller/admin.js';
+import { addCoupon, editCoupon, getCoupons, login, removeCoupon } from '../controller/admin.js';
 const router = express.Router();
 
 router.post('/login' , login);
 router.post('/addCoupon' , addCoupon);
 router.post('/removeCoupon' , removeCoupon);
-router.post('/getCoupons' , getCoupons);
+router.get('/getCoupons' , getCoupons);
+router.post('/editCoupon' , editCoupon);
 
 export default router;
